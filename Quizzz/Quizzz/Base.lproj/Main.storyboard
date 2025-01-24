@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,87 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quizzz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="L5g-hy-ezU">
+                                <rect key="frame" x="0.0" y="750" width="393" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="wma-NV-OhH"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="BED-AB-vaw">
+                                <rect key="frame" x="16" y="59" width="361" height="691"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd2-F7-fd5">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="320"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="js1-eq-9vq">
+                                        <rect key="frame" x="0.0" y="387" width="361" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="qiw-g5-pzE"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="True">
+                                            <backgroundConfiguration key="background" image="Rectangle"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jth-St-SKG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRq-Wr-vCe">
+                                        <rect key="frame" x="0.0" y="534" width="361" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="kiv-9Y-iOq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="False">
+                                            <backgroundConfiguration key="background" image="Rectangle"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5A-k9-4LL"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7xh-oP-HQJ">
+                                        <rect key="frame" x="0.0" y="681" width="361" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="bUW-rm-Oz2"/>
+                                        </constraints>
+                                    </progressView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.12398578791814097" green="0.14400335330011177" blue="0.40510574494949492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="L5g-hy-ezU" secondAttribute="bottom" id="0Wv-NB-9hy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BED-AB-vaw" secondAttribute="trailingMargin" id="1uQ-wZ-gKX"/>
+                            <constraint firstItem="L5g-hy-ezU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GEw-un-UYu"/>
+                            <constraint firstItem="BED-AB-vaw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X9B-fg-Na7"/>
+                            <constraint firstItem="BED-AB-vaw" firstAttribute="leadingMargin" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bRJ-jK-WQg"/>
+                            <constraint firstItem="L5g-hy-ezU" firstAttribute="top" secondItem="BED-AB-vaw" secondAttribute="bottom" id="hvw-fe-a6X"/>
+                            <constraint firstItem="L5g-hy-ezU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y1y-2P-jvV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="yRq-Wr-vCe" id="dIg-vB-rx8"/>
+                        <outlet property="progressBar" destination="7xh-oP-HQJ" id="RxO-1o-dP8"/>
+                        <outlet property="questionLabel" destination="Wd2-F7-fd5" id="q63-o7-ifH"/>
+                        <outlet property="trueButton" destination="js1-eq-9vq" id="aS8-l2-0vY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background-Bubbles" width="352" height="102"/>
+        <image name="Rectangle" width="322" height="68"/>
+    </resources>
 </document>

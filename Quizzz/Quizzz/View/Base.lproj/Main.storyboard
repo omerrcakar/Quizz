@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,10 +25,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="BED-AB-vaw">
                                 <rect key="frame" x="16" y="59" width="361" height="691"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd2-F7-fd5">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="320"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI4-iW-66B">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Question Text" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd2-F7-fd5">
+                                        <rect key="frame" x="0.0" y="87.333333333333357" width="361" height="232.66666666666663"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="js1-eq-9vq">
@@ -35,10 +42,10 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="qiw-g5-pzE"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="True">
-                                            <backgroundConfiguration key="background" image="Rectangle"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="True" backgroundImage="Rectangle"/>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jth-St-SKG"/>
                                         </connections>
@@ -48,25 +55,29 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="kiv-9Y-iOq"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="False">
                                             <backgroundConfiguration key="background" image="Rectangle"/>
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5A-k9-4LL"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7xh-oP-HQJ">
-                                        <rect key="frame" x="0.0" y="681" width="361" height="10"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7xh-oP-HQJ">
+                                        <rect key="frame" x="0.0" y="681" width="361" height="11"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="bUW-rm-Oz2"/>
                                         </constraints>
+                                        <color key="progressTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="trackTintColor" systemColor="systemYellowColor"/>
                                     </progressView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.12398578791814097" green="0.14400335330011177" blue="0.40510574494949492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97824221071004158" green="0.82971870296042349" blue="0.75267300086715538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="L5g-hy-ezU" secondAttribute="bottom" id="0Wv-NB-9hy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BED-AB-vaw" secondAttribute="trailingMargin" id="1uQ-wZ-gKX"/>
@@ -81,6 +92,7 @@
                         <outlet property="falseButton" destination="yRq-Wr-vCe" id="dIg-vB-rx8"/>
                         <outlet property="progressBar" destination="7xh-oP-HQJ" id="RxO-1o-dP8"/>
                         <outlet property="questionLabel" destination="Wd2-F7-fd5" id="q63-o7-ifH"/>
+                        <outlet property="scoreLabel" destination="JI4-iW-66B" id="6Q5-9k-jzu"/>
                         <outlet property="trueButton" destination="js1-eq-9vq" id="aS8-l2-0vY"/>
                     </connections>
                 </viewController>
@@ -92,5 +104,8 @@
     <resources>
         <image name="Background-Bubbles" width="352" height="102"/>
         <image name="Rectangle" width="322" height="68"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
